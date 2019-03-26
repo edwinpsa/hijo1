@@ -1,0 +1,44 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<dom-module id="ids-hijo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h1>Hola soy el hijo 1</h1>
+    <p<>La función del desarrollador de software recae en un programador o una compañía comercial que 
+    se dedica a uno o más aspectos del proceso de desarrollo de software</p>
+    <paper-button raised class="indigo" value="{{numero1}}">Numero1</paper-button>
+    <paper-button raised class="indigo" value="{{numero2}}">Numero2</paper-button>   
+  </template>
+
+  <script>
+    /**
+     * `ids-hijo`
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class IdsHijo extends Polymer.Element {
+      static get is() { return 'ids-hijo'; }
+      static get properties() {
+        return {
+          numero1: {
+            type: String,
+            reflectToAttribute: true
+          },
+             numero2: {
+            type: String,
+            reflectToAttribute: true
+          }
+        };
+      
+      
+      }
+    }
+
+    window.customElements.define(IdsHijo.is, IdsHijo);
+  </script>
+</dom-module>
